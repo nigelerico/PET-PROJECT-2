@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sourcey.materiallogindemo.DetailOrderActivity"
+    android:background="@drawable/bg_list_hotel">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        >
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:onClick="back"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_nama_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Hotel"
+                    android:textSize="10pt"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_metode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_no_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Nomor Pesanan"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_id_reservasi"
+                    android:text="ID RESERVASI"
+                    android:textSize="8pt"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/garis"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_id_reservasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/iron" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_no_pesanan"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_access_time"/>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_time"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Status"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/rl_status"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/label_metode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="Metode Pembayaran"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_metode"
+                    android:layout_below="@+id/label_metode"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Metode"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_instruksi"
+                    android:background="@color/primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_metode"
+                    android:textColor="@color/white"
+                    android:text="LIHAT INSTRUKSI PEMBAYARAN"
+                    android:layout_marginTop="20dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_below="@+id/cv_metode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label_pesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesanan Anda"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/label_pesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_hotel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_hotel"/>
+
+                <TextView
+                    android:id="@+id/tv_nama_hot"
+                    android:layout_toRightOf="@id/iv_hotel"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="7pt"
+                    android:text="Nama Hotel"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_alamat"
+                    android:layout_toRightOf="@id/iv_hotel"
+                    android:layout_below="@id/tv_nama_hot"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="6pt"
+                    android:text="Alamat Hotel"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/garis2"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/iv_hotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/iron" />
+
+                <TextView
+                    android:id="@+id/tv_nama_kamar"
+                    android:layout_below="@id/garis2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Deluxe Room"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_tgl_pesan"
+                    android:layout_below="@id/tv_nama_kamar"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="13 Agt 2019 - 14 Agt 2019 (1 malam)"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_tot_kamar"
+                    android:layout_below="@id/tv_tgl_pesan"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="1 kamar"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/garis3"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_tot_kamar"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/iron" />
+
+                <TextView
+                    android:id="@+id/label_harga"
+                    android:layout_below="@id/garis3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="7pt"
+                    android:text="Harga Total"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_total_harga"
+                    android:layout_below="@id/garis3"
+                    android:layout_marginTop="20dp"
+                    android:textSize="7pt"
+                    android:layout_alignParentRight="true"
+                    android:text="Rp 213.500"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tamu"
+        android:layout_below="@+id/rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label_tamu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Tamu"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/label_tamu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:id="@+id/label_nama_tamu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="6pt"
+                    android:text="Tamu"/>
+
+                <TextView
+                    android:id="@+id/tv_nama_tamu"
+                    android:layout_below="@id/label_nama_tamu"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:text="Bram Gendut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bukti"
+                android:layout_below="@id/rl_tamu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_bukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bukti Pembayaran"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_bukti"
+                    android:backgroundTint="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_bukti"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/darker_gray"
+                    android:src="@drawable/ic_photo_camera_black_24dp"/>
+
+                <Button
+                    android:id="@+id/btn_select_image"
+                    android:layout_below="@+id/iv_bukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/apply"
+                    android:backgroundTint="@color/oil"
+                    android:textColor="@color/white"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Pilih Gambar"/>
+
+                <Button
+                    android:id="@+id/btn_unggah"
+                    android:layout_below="@id/btn_select_image"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:textColor="@color/white"
+                    android:text="UNGGAH BUKTI PEMBAYARAN"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

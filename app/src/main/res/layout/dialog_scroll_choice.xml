@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/rl1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ic_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person_black_24dp"/>
+
+        <TextView
+            android:id="@+id/label_total"
+            android:layout_toRightOf="@+id/ic_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="Total Tamu"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.webianks.library.scroll_choice.ScrollChoice
+            android:id="@+id/scroll_choice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:scroll_background_color="@color/white"
+            app:scroll_selected_item_background="#8CF44336"
+            app:scroll_item_text_color="#8F8F8F"
+            app:scroll_atmospheric="true"
+            app:scroll_indicator="true"
+            app:scroll_indicator_color="#F44336"
+            app:scroll_item_align="center"
+            app:scroll_selected_item_text_color="#000000"
+            app:scroll_item_space="20dp" />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIMPAN"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/primary"/>
+
+</LinearLayout>

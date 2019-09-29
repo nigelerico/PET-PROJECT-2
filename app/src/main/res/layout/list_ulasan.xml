@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_ulasan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_profile" />
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_photo"
+                android:layout_marginLeft="10dp"
+                android:text="Nama User"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/garis"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@id/iv_photo"
+                android:layout_marginLeft="10dp"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+            <TextView
+                android:id="@+id/tv_ulasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_photo"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/garis"
+                android:layout_marginLeft="10dp"
+                android:textSize="10sp"
+                android:text="Ulasan"
+                android:textColor="@color/black"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

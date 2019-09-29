@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_list_hotel">
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/ic_search"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search_black_24dp"/>
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_tujuan"-->
+                        <!--android:hint="Lokasi"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_toLeftOf="@+id/ic_location"-->
+                        <!--android:layout_toRightOf="@+id/ic_search"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <TextView
+                        android:id="@+id/label_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toLeftOf="@+id/ic_location"
+                        android:layout_toRightOf="@+id/ic_search"
+                        android:text="Tujuan"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:id="@+id/et_tujuan"
+                        android:layout_below="@id/label_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toLeftOf="@+id/ic_location"
+                        android:layout_toRightOf="@+id/ic_search"
+                        android:text="Hotel Terdekat"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/ic_location"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_my_location_black_24dp"/>
+
+                    <View
+                        android:id="@+id/garis1"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/et_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iron" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/garis1"
+                        android:id="@+id/label_checkin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="11sp"
+                        android:text="Check-in"/>
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_checkin"-->
+                        <!--android:layout_below="@+id/label_checkin"-->
+                        <!--android:hint="Check-in"-->
+                        <!--android:inputType="date"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <TextView
+                        android:id="@+id/et_checkin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/label_checkin"
+                        android:textColor="@color/black"
+                        android:text="Jum, 21 Jun 19"/>
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/garis1"
+                        android:id="@+id/label_checkout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:layout_marginRight="20dp"
+                        android:text="Check-out"/>
+
+                    <TextView
+                        android:id="@+id/et_checkout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/label_checkout"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Sab, 22 Jun 19"/>
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_checkout"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_below="@+id/label_checkout"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:inputType="date"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:hint="Check-out"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <View
+                        android:id="@+id/garis2"
+                        android:layout_marginTop="40dp"
+                        android:layout_below="@id/label_checkin"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iron" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_below="@+id/garis2"
+                        android:textSize="11sp"
+                        android:id="@+id/label_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Total Tamu"/>
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_total"-->
+                        <!--android:layout_below="@+id/label_total"-->
+                        <!--android:hint="Total tamu"-->
+                        <!--android:inputType="number"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <TextView
+                        android:id="@+id/et_total"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_total"
+                        android:layout_marginBottom="10dp"
+                        android:text="1"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/garis2"
+                        android:id="@+id/label_kamar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"
+                        android:textSize="11sp"
+                        android:text="Kamar"/>
+
+                    <TextView
+                        android:id="@+id/et_kamar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_below="@+id/label_total"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:text="1"
+                        android:textSize="20sp"
+                        android:layout_marginRight="35dp"
+                        android:textStyle="bold"
+                        />
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_kamar"-->
+                        <!--android:layout_below="@+id/label_total"-->
+                        <!--android:hint="Kamar"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:inputType="number"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_brightness_3_black_24dp"
+                        android:layout_below="@+id/garis1"
+                        android:layout_toRightOf="@+id/label_checkin"
+                        android:layout_toLeftOf="@+id/label_checkout"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tot_malam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/et_checkin"
+                        android:layout_toLeftOf="@+id/et_checkout"
+                        android:layout_below="@+id/label_checkin"
+                        android:gravity="center"
+                        android:text="Malam"
+                        android:textColor="@android:color/darker_gray"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/btn_cari"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:text="CARI KAMAR"
+                        android:background="@color/primary_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_below="@+id/et_total"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <RelativeLayout
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+                    <ImageView
+                        android:id="@+id/ic_terakhir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_history_black_24dp"/>
+                    <TextView
+                        android:layout_toRightOf="@+id/ic_terakhir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Terakhir dilihat"
+                        android:textColor="@color/black"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/activity_ads"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

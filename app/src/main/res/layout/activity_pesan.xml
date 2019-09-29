@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_list_hotel">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        >
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:onClick="back"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lengkapi Data"
+                    android:textSize="10pt"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_pesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/tv_pesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_pesan"
+            android:text="Pesan"
+            android:textSize="5pt"
+            android:layout_marginLeft="1dp"
+            android:textColor="@color/primary"/>
+
+        <ImageView
+            android:id="@+id/kanan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_keyboard_arrow_right_red"
+            android:layout_toRightOf="@+id/iv_pesan"/>
+
+        <!--2-->
+
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:id="@+id/iv_konfirmasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kanan1"
+            android:background="@drawable/buttonstyle"
+            android:backgroundTint="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_toRightOf="@+id/kanan1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_konfirmasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kanan1"
+            android:layout_below="@+id/iv_konfirmasi"
+            android:text="Konfirmasi"
+            android:layout_marginLeft="27dp"
+            android:textSize="5pt"
+            android:textColor="@android:color/darker_gray"/>
+
+        <ImageView
+            android:id="@+id/kanan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_keyboard_arrow_right_red"
+            android:layout_toRightOf="@+id/iv_konfirmasi"/>
+
+        <!--3-->
+
+        <ImageView
+            android:layout_marginLeft="40dp"
+            android:id="@+id/iv_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kanan2"
+            android:background="@drawable/buttonstyle"
+            android:backgroundTint="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_toRightOf="@+id/kanan2"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kanan2"
+            android:layout_below="@+id/iv_bayar"
+            android:text="Bayar"
+            android:layout_marginLeft="40dp"
+            android:textSize="5pt"
+            android:textColor="@android:color/darker_gray"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_pesan">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_pesanan_anda"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_pesanan_anda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Pesanan Anda"
+                android:textColor="@android:color/darker_gray"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_pesanan_anda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pesanan_anda"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_hotel"
+                        android:src="@drawable/ic_hotel"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_nama_hotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_hotel"
+                        android:textColor="@color/black"
+                        android:text="Nama Hotel"
+                        android:layout_marginTop="2pt"
+                        android:textSize="8pt"
+                        android:layout_marginLeft="20dp"/>
+
+                    <View
+                        android:id="@+id/garis2"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/iv_hotel"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iron" />
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/iv_kamar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_door"
+                        android:layout_below="@+id/garis2"/>
+
+                    <TextView
+                        android:id="@+id/tv_kamar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_kamar"
+                        android:layout_below="@+id/garis2"
+                        android:text="Jenis Kamar"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_tgl_pesan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_kamar"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tgl_pesan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_kamar"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_toRightOf="@+id/iv_tgl_pesan"
+                        android:text="Tanggal Pesan"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/iv_orang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_tgl_pesan"
+                        android:src="@drawable/ic_boy"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_orang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_orang"
+                        android:layout_below="@+id/tv_tgl_pesan"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Jumlah Orang dan Kamar"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_data_pemesan"
+            android:layout_below="@+id/rl_pesanan_anda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_data_pemesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Data Pemesan"
+                android:textColor="@android:color/darker_gray"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_data_pemesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_data_pemesan"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+                    <ImageView
+                        android:id="@+id/foto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/user_profile"
+                        android:src="@drawable/circle"/>
+
+                    <TextView
+                        android:id="@+id/tv_nama_pemesan"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/foto"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:text="Nama Pemesan"/>
+
+                    <TextView
+                        android:id="@+id/tv_email_pemesan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/foto"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/tv_nama_pemesan"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:text="Email Pemesan"/>
+
+                    <View
+                        android:id="@+id/garis3"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/tv_email_pemesan"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iron" />
+
+                        <TextView
+                            android:id="@+id/tv_no_telp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="Nomor Telepon"
+                            android:textSize="5pt"
+                            android:layout_below="@+id/garis3"
+                            android:layout_marginTop="10dp"/>
+
+                        <EditText
+                            android:id="@+id/et_nomor_telepon"
+                            android:layout_below="@id/tv_no_telp"
+                            android:textColor="@color/black"
+                            android:textSize="6pt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="Nomor Telepon" />
+
+                    <View
+                        android:id="@+id/garis5"
+                        android:layout_below="@id/et_nomor_telepon"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iron" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tujuan"
+                android:layout_below="@+id/rl_data_pemesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_tujuan"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textSize="5pt"
+                            android:text="Apa tujuan perjalanan Anda kali ini ?"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_tujuan"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_liburan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Liburan"
+                            android:textSize="3pt"
+                            android:textColor="@color/black"
+                            android:background="@drawable/apply"/>
+
+                        <Button
+                            android:id="@+id/btn_bisnis"
+                            android:layout_toRightOf="@+id/btn_liburan"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Bisnis"
+                            android:textSize="3pt"
+                            android:textColor="@color/black"
+                            android:background="@drawable/apply"/>
+
+                        <Button
+                            android:id="@+id/btn_lainnya"
+                            android:layout_toRightOf="@+id/btn_bisnis"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Lainnya"
+                            android:textSize="3pt"
+                            android:textColor="@color/black"
+                            android:background="@drawable/apply"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_lanjut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_tujuan"
+                android:layout_margin="10dp"
+                android:text="Lanjut"
+                android:textColor="@color/white"
+                android:background="@color/primary"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        >
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:onClick="back"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_nama_hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Hotel"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_nama_hotel"
+                    android:text="Alamat"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_above="@+id/cv_bottom"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+           >
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:id="@+id/iv_gambar_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/iv_gambar_hotel"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_nama_hotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Nama Hotel"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <RatingBar
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/tv_rating"
+                android:progressBackgroundTint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="3"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txt_nama_hotel" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+
+                android:id="@+id/ic_lokasi"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_on_black_24dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_rating"/>
+            <TextView
+                android:id="@+id/txt_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_rating"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/ic_lokasi"
+                android:text="Alamat"
+                android:textSize="10sp"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/btn_lihat_alamat"
+                android:background="@color/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_rating"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:textSize="10sp"
+                android:text="Lihat Lokasi"/>
+
+
+
+            <View
+                android:id="@+id/garis1"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/txt_alamat"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/iv_facility"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_hotel_gray"
+                android:layout_below="@+id/garis1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fasilitas"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/garis1"
+                android:layout_toRightOf="@+id/iv_facility"/>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_sarapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/iv_facility"
+                    android:layout_toRightOf="@+id/cv_wifi"
+                    android:backgroundTint="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl_sarapan"
+                        android:layout_below="@+id/iv_facility">
+
+                        <ImageView
+                            android:id="@+id/iv_sarapan"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_local_dining_black_24dp"/>
+
+                        <TextView
+                            android:layout_below="@+id/iv_sarapan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Breakfast"
+                            android:textSize="8sp"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_wifi"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/iv_facility"
+                android:backgroundTint="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_wifi"
+                    android:layout_below="@+id/iv_facility">
+
+                    <ImageView
+                        android:id="@+id/iv_wifi"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_wifi_black_24dp"/>
+
+                    <TextView
+                        android:layout_below="@+id/iv_wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wi-Fi"
+                        android:textSize="8sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="10dp"/>
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:id="@+id/garis2"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/cv_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginTop="20dp"
+                android:id="@+id/iv_deskripsi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_info_black_24dp"
+                android:layout_below="@+id/garis2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tentang"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/garis2"
+                android:layout_toRightOf="@+id/iv_deskripsi"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txt_detail"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_deskripsi"
+                android:textColor="@color/black"
+                android:text="Detail Informasi"
+                android:layout_marginBottom="20dp"/>
+
+
+
+            <View
+                android:id="@+id/garis3"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/txt_detail"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginTop="20dp"
+                android:id="@+id/iv_ulasan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_info_black_24dp"
+                android:layout_below="@+id/garis3"/>
+
+            <TextView
+                android:id="@+id/label_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ulasan"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/garis3"
+                android:layout_toRightOf="@+id/iv_ulasan"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_review"
+                android:layout_below="@id/label_review"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/label1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentLeft="true"
+                android:text="Harga Mulai dari"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:id="@+id/txt_harga_per_malam"
+                android:layout_below="@+id/label1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Rp 15.000"/>
+            <TextView
+                android:id="@+id/label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt_harga_per_malam"
+                android:textColor="@color/black"
+                android:layout_below="@id/label1"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="8sp"
+                android:text="per kamar per malam"/>
+            <TextView
+                android:layout_below="@+id/txt_harga_per_malam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="7sp"
+                android:text="Harga termasuk pajak"/>
+
+            <Button
+                android:id="@+id/btn_pilih_kamar"
+                android:background="@color/primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:padding="15dp"
+                android:text="PILIH KAMAR"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

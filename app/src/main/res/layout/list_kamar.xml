@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_kamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_launcher_background"/>
+
+            <TextView
+                android:id="@+id/tv_nama_kamar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="Nama Kamar"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="DETAIL"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tv_nama_kamar"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_toRightOf="@id/tv_detail"
+                android:layout_below="@+id/tv_nama_kamar"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"/>
+
+            <View
+                android:id="@+id/garis1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+            <ImageView
+                android:id="@+id/iv_max_orang"
+                android:layout_below="@+id/garis1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_man_user"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_max_orang"
+                android:layout_below="@+id/garis1"
+                android:layout_toRightOf="@+id/iv_max_orang"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:textSize="8sp"
+                android:text="Maks. 2 Orang"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_ukuran"
+                android:layout_below="@+id/iv_max_orang"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_full_size"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_ukuran"
+                android:layout_below="@+id/tv_max_orang"
+                android:layout_toRightOf="@+id/iv_ukuran"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:textSize="8sp"
+                android:text="3 x 4"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_sarapan"
+                android:layout_below="@+id/iv_ukuran"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_plate_fork_and_knife"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_sarapan"
+                android:layout_below="@+id/tv_ukuran"
+                android:layout_toRightOf="@+id/iv_sarapan"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:textSize="8sp"
+                android:text="Sarapan"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_wifi"
+                android:layout_below="@+id/iv_sarapan"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_wifi"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_wifi"
+                android:layout_below="@+id/tv_sarapan"
+                android:layout_toRightOf="@+id/iv_sarapan"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:textSize="8sp"
+                android:text="Wi-fi gratis"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_tipe_kasur"
+                android:layout_below="@+id/iv_wifi"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_double_king_size_bed"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_tipe_kasur"
+                android:layout_below="@+id/tv_wifi"
+                android:layout_toRightOf="@+id/iv_sarapan"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:textSize="8sp"
+                android:text="Single Bed"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/garis2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_tipe_kasur"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/iron" />
+
+            <TextView
+                android:id="@+id/tv_harga_kamar"
+                android:layout_below="@+id/garis1"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="20sp"
+                android:text="Rp. 200.000"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/label_harga"
+                android:layout_below="@+id/tv_harga_kamar"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:text="per kamar per malam"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/label_pajak"
+                android:layout_below="@+id/label_harga"
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:text="Harga termasuk pajak"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/iv_pajak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_pajak"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_info_outline_black_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/label_harga"/>
+
+            <TextView
+                android:id="@+id/label_kamar_terbatas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis2"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/holo_orange_dark"
+                android:text="Kamar Terbatas !"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/label_kamar_terpesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis2"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/primary_dark"
+                android:text="Kamar Terpesan !"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"/>
+
+            <Button
+                android:id="@+id/btn_pesan_kamar"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/holo_orange_dark"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/garis2"
+                android:textColor="@color/white"
+                android:text="PESAN KAMAR"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

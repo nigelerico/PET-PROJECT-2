@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">E-Hotel</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_profile">Profile</string>
+
+    <string name="google_maps_key">AIzaSyCMlkE9KrKYcoPuFLeCTK-GFOgeSoYf_sE</string>
+
+</resources>
